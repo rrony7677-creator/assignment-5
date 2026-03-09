@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>github- Issues-tracker || Home</title>
+    <link rel="shortcut icon" href="./images/favicon.webp" type="image/x-icon">
+
+    <!-- Tailwind + DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F8FAFC]">
+    <!-- == Loding Spanner added == -->
+    <div id="global-loader" class="hidden fixed inset-0 bg-white/70 backdrop-blur-sm z-[9999] flex items-center justify-center">
+        <div class="flex flex-col items-center">
+            <span class="loading loading-spinner loading-lg text-[#5A00FF]"></span>
+            <p class="mt-4 text-slate-500 font-bold animate-pulse text-xs uppercase tracking-widest">Processing Data...</p>
+        </div>
+    </div>
+
+    <!-- == Home Header Area == -->
+    <section>
+        <div class="flex flex-col md:flex-row justify-between items-center px-4 md:px-20 py-4 navbar bg-base-100 shadow-sm gap-4">
+            <div class="flex items-center justify-center md:justify-start w-full md:w-auto">
+                <img class="w-8 h-8 md:w-10 md:h-10" src="./assets/github-logo.png" alt="Logo">
+                <a class="btn btn-ghost text-lg md:text-xl px-2">GitHub Issues Tracker</a>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+                <input id="search-input" type="text" placeholder="Search" 
+                    class="input input-bordered w-full md:w-64" />
+                
+                <div class="w-full sm:w-auto">
+                    <button id="search-btn" class="btn btn-primary w-full sm:w-auto whitespace-nowrap">
+                        <i class="fa-solid fa-plus"></i> New Issue
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+    <!-- == Home top side == -->
+    <section class="max-w-[1200px] mx-auto mt-10 space-y-6">
+        <div class="flex gap-2 p-4 bg-white rounded-lg shadow-sm">
+  
+            <button id="btn-all" onclick="apiCard()" class="filter-btn btn btn-soft btn-primary" text-white border-none min-h-0 h-10 px-8">
+                All
+            </button>
+
+            <button id="btn-open" class="filter-btn btn btn-soft btn-primary min-h-0 h-10 px-6">
+                Open
+            </button>
+
+            <button id="btn-closed" class="filter-btn btn btn-soft btn-primary min-h-0 h-10 px-6">
+                Closed
+            </button>
+        </div>
+
+        <!-- == Home count area == -->
+        <div class="flex items-center justify-between bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+  
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-full bg-purple-100 flex items-center justify-center text-[#5A00FF]">
+                    <i class="fa-solid fa-bahai text-2xl"></i> 
+                </div>
+                <div>
+                    <h2 id="total-issue-count" class="text-2xl font-bold text-slate-800 leading-none">50 Issues</h2>
+                    <p class="text-slate-500 text-sm mt-1">Track and manage your project issues</p>
+                </div>
+            </div>
+
+            <div class="flex gap-8">
+                <div class="flex items-center gap-2 text-slate-700 font-semibold">
+                    <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                    Open
+                </div>
+                <div class="flex items-center gap-2 text-slate-700 font-semibold">
+                    <span class="w-3 h-3 rounded-full bg-[#A855F7]"></span>
+                    Closed
+                </div>
+            </div>
+        </div>
+
+        <!-- == Dynamic Card == -->
+        <div id="homeCard" class="grid grid-cols-1 md:grid-cols-3 gap-10 bg-slate-50 p-4 md:p-8">
+
+        </div>
+    </section>
+
+    <!-- == Dodal Code == -->
+    <dialog id="issue_modal" class="modal">
+        <div class="modal-box max-w-2xl p-0 overflow-hidden rounded-3xl">
+            <div id="modal-content" class="p-9"></div>
+                
+            <div class="modal-action p-6 bg-slate-50">
+                <form method="dialog">
+                    <button class="btn btn-primary text-white">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+<script src="./script/home.js"></script>
+</body>
+</html>

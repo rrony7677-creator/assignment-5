@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>github- Issues-tracker | Home</title>
+    <link rel="shortcut icon" href="./images/favicon.webp" type="image/x-icon">
+
+    <!-- Tailwind + DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#F8FAFC]">
+
+    <!-- == Sing In Area == -->
+    <section class="min-h-screen bg-white max-w-md mx-auto px-6 flex flex-col justify-center py-10">
+        <div class="text-center space-y-3 mb-8">
+            <img class="mx-auto w-20 h-20 mb-4" src="./assets/github-logo.png" alt="github logo">
+            <h2 class="font-bold text-[#1E293B] text-2xl">GitHub Issues Tracker</h2>
+            <p class="text-[#64748B] text-sm font-medium">Sign in to manage your issues</p>
+        </div>
+
+        <form class="rounded-xl p-8 space-y-5">
+            <div class="flex flex-col gap-1.5">
+                <label class="text-[#1E293B] font-semibold text-sm">Username</label>
+                <input id="signIn-userName" type="text" class="w-full px-4 py-2.5 rounded-lg border border-[#E2E8F0] focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm" placeholder="Enter Username" required />
+                <p class="text-[#6366F1] text-[11px] font-medium mt-1">Default: admin</p>
+            </div>
+
+            <div class="flex flex-col gap-1.5">
+                <label class="text-[#1E293B] font-semibold text-sm">Password</label>
+                <input id="signIn-password" type="password" class="w-full px-4 py-2.5 rounded-lg border border-[#E2E8F0] focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm" placeholder="Enter Password" required />
+                <p class="text-[#6366F1] text-[11px] font-medium mt-1">Default: admin123</p>
+            </div>
+
+            <button id="btn-signIn" class="w-full bg-[#4F46E5] hover:bg-[#4338CA] text-white font-bold py-3 rounded-xl transition-colors duration-200 mt-2" type="submit">
+                Sign In
+            </button>
+
+            <div class="relative flex py-4 items-center">
+                <div class="flex-grow border-t border-[#E2E8F0]"></div>
+                <span class="flex-shrink mx-4 text-[#64748B] text-xs font-bold uppercase">OR</span>
+                <div class="flex-grow border-t border-[#E2E8F0]"></div>
+            </div>
+
+            <div class="text-center">
+                <p class="text-[#64748B] text-[13px] mb-3">Demo Credentials:</p>
+                <div class="bg-[#F8FAFC] border border-[#F1F5F9] rounded-xl p-6">
+                    <p class="text-[#1E293B] text-sm"><span class="font-bold">Username:</span> admin</p>
+                    <p class="text-[#1E293B] text-sm"><span class="font-bold">Password:</span> admin123</p>
+                </div>
+            </div>
+        </form>
+    </section>
+    
+<script src="./script/signin.js"></script>
+</body>
+</html>
