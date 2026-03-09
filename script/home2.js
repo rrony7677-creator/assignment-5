@@ -20,7 +20,7 @@ const serverData = (recevedData) => {
 
     const totalCountElement = document.getElementById("total-issue-count");
     if (totalCountElement) {
-      totalCountElement.innerText = ${recevedData.length} Issues;
+      totalCountElement.innerText = `${recevedData.length} Issues`;
     }
 
   const cardContainer = document.getElementById("homeCard");
