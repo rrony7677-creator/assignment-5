@@ -19,7 +19,7 @@ forEach(): This is just a worker that goes through the list one by one to do a t
 
 4 What is an arrow function?
 
-It’s a sleek, shorthand way of writing functions in modern JavaScript. Instead of typing out the whole word function, you just use a cool "arrow" symbol () => {}, which makes your code look much cleaner and easier to read.
+It’s a sleek, shorthand way of writing functions in modern JavaScript. Instead of typing out the whole word function, you just use a cool "arrow" symbol () => {}, which makes your code look much cleaner and easier to reader.
 5 What are template literals?
 
 These are a lifesaver for writing strings. Instead of using quotes and plus signs to join text and variables, you use backticks (`) and just drop your variables directly inside ${}. It makes handling dynamic text much smoother.
