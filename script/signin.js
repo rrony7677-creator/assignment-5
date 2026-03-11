@@ -22,6 +22,5 @@ singBtn.addEventListener('click', (event) => {
     }
 
     alert('Login Succesefull!')
-
     window.location.href = 'home.html';
 });
