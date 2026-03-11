@@ -49,7 +49,7 @@ const serverData = (recevedData) => {
                           .map(
                             (label) => `
                             <div class="bg-yellow-500 border-slate-200 text-black text-[12px] pr-3 rounded-lg gap-1.5 uppercase font-bold h-auto">
-                                <i class="fa-solid ${label.toLowerCase().includes("bug") ? "fa-bug text-red-400" : "fa-circle-info text-amber-400"}"></i>
+                             <i class="fa-solid ${label.toLowerCase().includes("bug") ? "fa-bug text-red-400" : "fa-circle-info text-amber-400"}"></i>
                                 ${label}
                             </div>`,
                           ).join("")}
