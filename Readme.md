@@ -8,7 +8,7 @@ const: Think of this as a person of their word. Once you set a value, it stays t
 
 2 What is the spread operator (...)?
 
-The spread operator is like a magic tool that unpacks everything from a bag (an array or object) and pours it into a new one. It’s super helpful when you want to copy data or merge multiple lists into one without messing up the original.
+The spread operator is like a magic tool that unpacks everything from a bag (an array or object) and pours it into a new one. It’s super helpful when you want to copy data or merge multiple lists into one without messing up the original.we are using it different ways
 3 What is the difference between map(), filter(), and forEach()?
 
 map(): This is like a factory machine. You feed it a list, it processes every single item, and hands you back a brand-new list with the results.
